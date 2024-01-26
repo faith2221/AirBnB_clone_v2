@@ -33,7 +33,7 @@ def Ctext(text):
 
 @app.route('/python', strict_slashes=False)
 @app.route("/python/<text>", strict_slashes=False)
-def pythoinText(text="is cool"):
+def pythonText(text="is cool"):
     """
     Displays python is cool.
     """
