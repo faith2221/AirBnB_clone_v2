@@ -24,11 +24,11 @@ def hbnb():
 
 
 @app.route("/c/<text>", strict_slashes=False)
-def display_ctext(text_to_display):
+def Ctext(text):
     """
     Displays “C” followed by the value of the text variable.
     """
-    return "C {}".format(text_to_display.replace("_", " "))
+    return "C {}".format(text.replace("_", " "))
 
 
 @app.route('/python', strict_slashes=False)
