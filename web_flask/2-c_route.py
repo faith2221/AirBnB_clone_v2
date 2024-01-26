@@ -15,7 +15,7 @@ def hello_hbnb():
     return ("Hello HBNB!")
 
 
-@app.route('/', strict_slashes=False)
+@app.route("/hbnb", strict_slashes=False)
 def hbnb():
     """
     Displays "Hello HBNB!" on the /hbnb path.
@@ -23,12 +23,12 @@ def hbnb():
     return ("HBNB")
 
 
-@app.route('/c/<text>', strict_slashes=False)
-def display_ctext(text_to_display):
+@app.route("/c/<text>", strict_slashes=False)
+def Ctext(text):
     """
     Displays “C” followed by the value of the text variable.
     """
-    return "C {}".format(text_to_display.replace("_", " "))
+    return "C {}".format(text.replace("_", " "))
 
 
 if __name__ == "__main__":

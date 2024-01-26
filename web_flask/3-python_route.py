@@ -15,7 +15,7 @@ def hello_hbnb():
     return ("Hello HBNB!")
 
 
-@app.route('/', strict_slashes=False)
+@app.route("/hbnb", strict_slashes=False)
 def hbnb():
     """
     Displays "Hello HBNB!" on the /hbnb path.
@@ -23,7 +23,7 @@ def hbnb():
     return ("HBNB")
 
 
-@app.route('/c/<text>', strict_slashes=False)
+@app.route("/c/<text>", strict_slashes=False)
 def display_ctext(text_to_display):
     """
     Displays “C” followed by the value of the text variable.
@@ -33,11 +33,11 @@ def display_ctext(text_to_display):
 
 @app.route('/python', strict_slashes=False)
 @app.route("/python/<text>", strict_slashes=False)
-def display_python(text_to_display="is cool"):
+def pythoinText(text="is cool"):
     """
     Displays python is cool.
     """
-    return "Pyhton {}".format(text_to_display.replace("_", " "))
+    return "Pyhton {}".format(text.replace("_", " "))
 
 
 if __name__ == "__main__":
