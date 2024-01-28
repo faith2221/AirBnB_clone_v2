@@ -37,7 +37,7 @@ def pythonText(text="is cool"):
     """
     Displays python is cool.
     """
-    return "Pyhton {}".format(text.replace("_", " "))
+    return "Pyhton " + text.replace("_", " ")
 
 
 if __name__ == "__main__":

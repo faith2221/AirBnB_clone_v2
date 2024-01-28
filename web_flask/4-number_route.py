@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+i#!/usr/bin/python3
 """
 Starts a simple Flask web application.
 """
@@ -37,7 +37,7 @@ def pythonText(text="is cool"):
     """
     Displays python is cool.
     """
-    return "Pyhton {}".format(text.replace("_", " "))
+    return "Pyhton " + text.replace("_", " ")
 
 
 @app.route("/number/<int:n>", strict_slashes=False)
