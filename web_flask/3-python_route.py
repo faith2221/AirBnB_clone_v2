@@ -12,27 +12,27 @@ def hello_hbnb():
     """
     Returns a given string.
     """
-    return ("Hello HBNB!")
+    return ('Hello HBNB!')
 
 
-@app.route("/hbnb", strict_slashes=False)
+@app.route('/hbnb', strict_slashes=False)
 def hbnb():
     """
     Displays "Hello HBNB!" on the /hbnb path.
     """
-    return ("HBNB")
+    return ('HBNB')
 
 
-@app.route("/c/<text>", strict_slashes=False)
+@app.route('/c/<text>', strict_slashes=False)
 def cis_fun(text):
     """
     Displays “C” followed by the value of the text variable.
     """
-    return "C {}".format(text.replace("_", " "))
+    return 'C {}'.format(text.replace('_', ' '))
 
 
-@app.route("/python", strict_slashes=False)
-@app.route("/python/<text>", strict_slashes=False)
+@app.route('/python', strict_slashes=False)
+@app.route('/python/<text>', strict_slashes=False)
 def pythonText(text="is cool"):
     """
     Displays python is cool.
@@ -40,6 +40,6 @@ def pythonText(text="is cool"):
     return 'Pyhton ' + text.replace('_', ' ')
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.url_map.strict_slashes = False
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host='0.0.0.0', port=5000)
