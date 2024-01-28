@@ -24,7 +24,7 @@ def hbnb():
 
 
 @app.route("/c/<text>", strict_slashes=False)
-def Ctext(text):
+def cis_fun(text):
     """
     Displays “C” followed by the value of the text variable.
     """
@@ -37,8 +37,9 @@ def pythonText(text="is cool"):
     """
     Displays python is cool.
     """
-    return "Pyhton " + text.replace("_", " ")
+    return 'Pyhton ' + text.replace('_', ' ')
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=None)
+    app.url_map.strict_slashes = False
+    app.run(host="0.0.0.0", port=5000)
