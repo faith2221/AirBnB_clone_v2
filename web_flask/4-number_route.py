@@ -33,7 +33,7 @@ def python_is_cool(text='is cool'):
 
 
 @app.route('/number/<int:n')
-def isNumber(n):
+def print_int(n):
     """
     Displays n is a number.
     """
