@@ -22,11 +22,11 @@ def state():
     """
     Displays an html page with States.
     """
-    states = strorage.all(State)
+    states = storage.all(State)
     return render_template("9-states.html", states=states, mode="all")
 
 
-@app.route("states/<id>", strict_slashes=False)
+@app.route("/states/<id>", strict_slashes=False)
 def state_by_id(id):
     """
     displays an html page with cities of that state.
