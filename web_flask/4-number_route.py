@@ -28,7 +28,7 @@ def Ctext(text):
     """
     Displays “C” followed by the value of the text variable.
     """
-    return 'C {}'.format('_', ' ')
+    return 'C {}'.format(text.replace('_', ' '))
 
 
 @app.route('/python/')
