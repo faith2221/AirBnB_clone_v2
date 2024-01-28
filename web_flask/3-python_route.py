@@ -7,7 +7,7 @@ from flask import Flask
 app = Flask(__name__)
 
 
-@app.route('/', strict_slashes=False)
+@app.route('/')
 def hello_hbnb():
     """
     Returns a given string.
@@ -15,29 +15,21 @@ def hello_hbnb():
     return ('Hello HBNB!')
 
 
-@app.route('/hbnb', strict_slashes=False)
+@app.route('/hbnb')
 def hbnb():
     """
-    Displays "Hello HBNB!" on the /hbnb path.
+    Adds a text to that says C is fun.
     """
-    return ('HBNB')
+    return 'C {}'.format('_', ' ')
 
 
-@app.route('/c/<text>', strict_slashes=False)
-def cis_fun(text):
+@app.route('/python/')
+@app.route('/python/<text>')
+def python_is_cool(text='is cool'):
     """
-    Displays “C” followed by the value of the text variable.
+    Text python is cool'
     """
-    return 'C {}'.format(text.replace('_', ' '))
-
-
-@app.route('/python', strict_slashes=False)
-@app.route('/python/<text>', strict_slashes=False)
-def pythonText(text="is cool"):
-    """
-    Displays python is cool.
-    """
-    return 'Pyhton ' + text.replace('_', ' ')
+    return 'Python ' + text.replace('_', ' ')
 
 
 if __name__ == '__main__':
