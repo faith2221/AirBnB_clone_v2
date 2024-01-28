@@ -12,10 +12,10 @@
                 {% endfor %}
                 </ul>
         {% elif mode == 'id' %}
- 		<h1>State: {{states.name }}</h1>
+ 		<h1>State: {{state.name }}</h1>
                 <h3>Cities:</h3>
                 <ul>
-                {% for city in states.cities|sort(attribute="name") %}
+                {% for city in state.cities|sort(attribute="name") %}
                         <li>{{ city.id }}: <b>{{ city.name }}</b></li>
                 {% endfor %}
                 </ul>
