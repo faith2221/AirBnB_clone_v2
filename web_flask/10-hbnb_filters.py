@@ -20,7 +20,7 @@ def hbnb_filters():
 
 
 @app.teardown_appcontext
-def teardown(exc)
+def teardown(exc):
     """
     Method used to remove current SQLAlchemy session.
     """

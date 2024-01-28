@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 
 @app.teardown_appcontext
-def teardown(self)
+def teardown(self):
     """
     Method used to close the session.
     """

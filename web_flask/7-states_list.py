@@ -19,7 +19,7 @@ def display_states():
 
 
 @app.teardown_appcontext
-def teardown(self)
+def teardown(self):
     """
     Method used to remove current SQLAlchemy session.
     """

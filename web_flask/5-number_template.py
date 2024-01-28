@@ -54,7 +54,7 @@ def num_template(n):
     """
     It retrieves  the template request.
     """
-    path = '5-number.html'
+    path = 'templates/5-number.html'
     return render_template(path, n=n)
 
 
