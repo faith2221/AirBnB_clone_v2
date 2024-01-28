@@ -18,7 +18,15 @@ def hello_hbnb():
 @app.route('/hbnb')
 def hbnb():
     """
-    Adds a text to that says C is fun.
+    It returns the string HBNB.
+    """
+    return 'HBNB'
+
+
+@app.route('/c/<text>')
+def Ctext(text):
+    """
+    Displays “C” followed by the value of the text variable.
     """
     return 'C {}'.format('_', ' ')
 
